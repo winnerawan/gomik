@@ -21,3 +21,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('/comics', 'ComicController');
 Route::resource('/categories', 'CategoryController');
 Route::resource('/chapters', 'ChapterController');
+Route::get('/image/chapter/{id}', 'ChapterController@look');

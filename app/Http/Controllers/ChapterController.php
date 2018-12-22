@@ -103,4 +103,8 @@ class ChapterController extends Controller
         return redirect('chapters');
 
     }
+
+    public function look($id) {
+       return view('chapters.look')->with(['images' => Image::where('chapter_id', $id)->get()]);
+    }
 }
