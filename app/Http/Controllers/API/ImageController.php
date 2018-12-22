@@ -17,10 +17,11 @@ class ImageController extends Controller
         //return response()->json(Image::where('chapter_id', $chapter_id)->get());
     }
 
-    public function store() {
+    public function store($id) {
         $request = Input::json();
         foreach ($request as $key => $value) {
-            Image::insert($value);
+            $arr = ['chapter_id' => $id, 'link' => $value['link']];
+            Image::insert($arr);
         }
     }
 }

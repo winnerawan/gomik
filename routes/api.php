@@ -16,7 +16,7 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::post('tes', 'API\ImageController@store');
+Route::post('tes/{id}', 'API\ImageController@store');
 Route::get('comics', 'API\ComicController@getComics');
 Route::get('images/{chapter_id}', 'API\ImageController@getImageByChapter');
 Route::get('comic/{comidId}', 'API\ChapterController@getChapterByComic');
