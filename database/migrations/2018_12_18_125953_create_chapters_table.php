@@ -16,7 +16,8 @@ class CreateChaptersTable extends Migration
         Schema::create('chapters', function (Blueprint $table) {
             $table->increments('id')->unsigned();
             $table->integer('comic_id');
-            $table->string('title');
+            $table->string('chapter');
+            $table->string('url');
             $table->timestamps();
         });
     }
