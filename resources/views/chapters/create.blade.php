@@ -42,7 +42,15 @@
                                             <small class="text-muted"></small>
                                         </h5>
                                         <div class="form-group">
-                                                {{ Form::text('title', null, array('id' => 'name','class' => 'form-control', 'required' => '', 'maxlength' => '255')) }}
+                                                {{ Form::text('chapter', null, array('id' => 'name','class' => 'form-control', 'required' => '', 'maxlength' => '255')) }}
+                                        </div>
+                                    </fieldset>
+                                    <fieldset>                                    
+                                        <h5>URL
+                                            <small class="text-muted"></small>
+                                        </h5>
+                                        <div class="form-group">
+                                                {{ Form::text('url', null, array('id' => 'name','class' => 'form-control', 'required' => '', 'maxlength' => '255')) }}
                                         </div>
                                     </fieldset>
                                     
