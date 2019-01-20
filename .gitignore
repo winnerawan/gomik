@@ -3,7 +3,7 @@
 /public/storage
 /storage/*.key
 /vendor
-/database/seeds/AdminTableSeeder
+/database/seeds/AdminTableSeeder.php
 .env
 .phpunit.result.cache
 Homestead.json
