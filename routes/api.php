@@ -21,3 +21,4 @@ Route::get('newchapters', 'API\ChapterController@getNewChapter');
 Route::get('comics', 'API\ComicController@getComics');
 Route::get('images/{chapter_id}', 'API\ImageController@getImageByChapter');
 Route::get('comic/{comidId}', 'API\ChapterController@getChapterByComic');
+Route::get('genres', 'API\GenreController@genres');
