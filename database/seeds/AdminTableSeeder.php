@@ -11,11 +11,11 @@ class AdminTableSeeder extends Seeder
      */
     public function run()
     {
-        // \App\User::create([
-        //     'id' => 1,
-        //     'name' => 'Administrator',
-        //     'email' => 'gokep.app@gmail.com',
-        //     'password' => bcrypt('./Iseng2pertamax')
-        // ]);
+        \App\User::create([
+            'id' => 1,
+            'name' => 'Administrator',
+            'email' => 'gokep.app@gmail.com',
+            'password' => bcrypt('./Iseng2pertamax')
+        ]);
     }
 }

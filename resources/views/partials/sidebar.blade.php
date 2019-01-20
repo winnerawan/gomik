@@ -19,6 +19,17 @@
                     </li>
                 </ul>
             </li>
+            <li class=" nav-item"><a href="#"><i class="la la-columns"></i><span class="menu-title" data-i18n="nav.page_layouts.main">Genre</span></a>
+                <ul class="menu-content">
+                    <li><a class="menu-item" href="{{ url('genres') }}" data-i18n="nav.page_layouts.1_column"></a>
+                    </li>
+                    <li class="navigation-divider"></li>
+                    <li><a class="menu-item" href="{{ url('genres') }}" data-i18n="nav.page_layouts.fixed_navbar">Data Genre</a>
+                    </li>
+                    <li><a class="menu-item" href="{{ url('genres/create') }}" data-i18n="nav.page_layouts.fixed_navigation">Tambah Genre</a>
+                    </li>
+                </ul>
+            </li>
             <li class=" nav-item"><a href="#"><i class="la la-navicon"></i><span class="menu-title" data-i18n="nav.navbars.main">Komik</span></a>
                 <ul class="menu-content">
                     <li><a class="menu-item" href="{{ url('comics') }}" data-i18n="nav.navbars.nav_light">Data Komik</a>

@@ -1,5 +1,4 @@
 @extends('template')
-
 @section('content')
 <!-- Multi-column ordering table -->
 <section id="multi-column">
@@ -7,7 +6,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title">Data Komik</h4>
+                    <h4 class="card-title">Data Genre</h4>
                     <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
                     <div class="heading-elements">
                         <ul class="list-inline mb-0">
@@ -23,26 +22,13 @@
                         <table class="table table-striped table-bordered multi-ordering">
                             <thead>
                             <tr>
-                                <th>No</th>
-                                <th>Nama Komik</th>
-                                <th>Deskripsi</th>
-                                <th>Genre</th>
-                                <th>Aksi</th>
+                                <th>Nama Genre</th>
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($comics as $i => $comic)
+                            @foreach($genres as $genre)
                             <tr>
-                                <td>{{ $i+1 }}</td>
-                                <td>{{ $comic->title }}</td>
-                                <td>{{ $comic->description }}</td>
-                                <td>
-                                    @foreach($comic->genres as $genre)
-                                       {{ $loop->first ? '' : ', ' }}
-                                        {{ $genre->genre->name}}
-                                    @endforeach
-                                </td>
-                                <td><a href="{{ url('comics/'.$comic->id . '\edit/')}}">Edit</a></td>
+                                <td><a href="{{ url('genres/' . $genre->id.'/edit') }}">{{ $genre->name }}</a></td>
                             </tr>
                             @endforeach
                             </tbody>

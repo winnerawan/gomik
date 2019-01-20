@@ -7,6 +7,9 @@ use App\Comic;
 use DB;
 use App\Chapter;
 use App\Category;
+use App\Genre;
+use App\GenreComic;
+
 
 class ComicController extends Controller
 {
@@ -33,7 +36,8 @@ class ComicController extends Controller
      */
     public function create()
     {
-        return view('comics.create')->with(['categories' => Category::all()]);
+
+        return view('comics.create')->with(['categories' => Category::all(), 'genres' => Genre::all()]);
     }
 
     /**
@@ -50,6 +54,15 @@ class ComicController extends Controller
         $comic->image = $request->image;
         $comic->description = $request->description;
         $comic->save();
+
+        for ($i=0; $i<sizeof($request->input('genres')); $i++) {
+            $genre = new GenreComic();
+            $genre->comic_id = $comic->id;
+            $genre->genre_id = $request->genres[$i];
+            $genre->save();
+        }
+
+        // dd($request->input('genres'));
 
         return redirect('comics');
     }
@@ -73,7 +86,7 @@ class ComicController extends Controller
      */
     public function edit($id)
     {
-        return view('comics.edit')->with(['comic' => Comic::find($id), 'categories' => Category::all()]);
+        return view('comics.edit')->with(['comic' => Comic::find($id), 'categories' => Category::all(), 'genres' => Genre::all()]);
     }
 
     /**
@@ -91,6 +104,12 @@ class ComicController extends Controller
         $comic->image = $request->input('image');
         $comic->description = $request->input('description');
         $comic->save();
+
+        // $genre = GenreComic::where('comic_id', $comic->id)->get();
+        // $genre = GenreComic::updateOrCreate(["comic_id", $comic->id, "genre_id", $request->input('genres')]);
+        //dd($request->input('genres'));
+        
+
         return redirect('comics');
 
     }

@@ -63,6 +63,18 @@
                                             />
                                         </div>
                                     </fieldset>
+                                    <fieldset>
+                                        <h5>Genre
+                                            <small class="text-muted"></small>
+                                        </h5>
+                                        <div class="form-group">
+                                            @foreach($genres as $genre)
+                                                
+                                                {{ Form::checkbox('genres[]', $genre->id) }}
+                                                {{ $genre->name}}
+                                            @endforeach    
+                                        </div>
+                                    </fieldset>
                                     <div class="form-actions">
                                         <div class="text-right">
                                             <button type="submit" class="btn btn-primary">Submit <i class="ft-thumbs-up position-right"></i></button>

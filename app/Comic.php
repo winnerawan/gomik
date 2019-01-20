@@ -13,4 +13,8 @@ class Comic extends Model
     public function chapters() {
         return $this->hasMany(Chapter::class);
     }
+
+    public function genres() {
+        return $this->hasMany(GenreComic::class);
+    }
 }
