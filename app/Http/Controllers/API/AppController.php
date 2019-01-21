@@ -12,7 +12,7 @@ class AppController extends Controller
         $app = [
             "banner" => "ca-app-pub-9400864410179150/3066383366",
             "inters" => "ca-app-pub-9400864410179150/7587425763",
-            "reward" => "rewards",
+            "reward" => "ca-app-pub-9400864410179150/1281995578",
             "safe_mode" => false
         ];
 
