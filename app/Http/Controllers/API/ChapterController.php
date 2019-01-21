@@ -17,7 +17,7 @@ class ChapterController extends Controller
 
     public function getNewChapter() {
         $chapters = DB::select(
-            "SELECT chap.id, chap.comic_id, com.title, chap.chapter, chap.url, com.image, chap.created_at FROM chapters AS chap, comics AS com "
+            "SELECT chapters.id, chapters.comic_id, comics.title, chapters.chapter, chapters.url, comics.image, chapters.created_at FROM chapters INNER JOIN comics ON comics.id = chapters.comic_id ORDER BY chapters.created_at DESC LIMIT 10"
         );
 
         return response()->json($chapters);
