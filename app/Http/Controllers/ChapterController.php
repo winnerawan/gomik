@@ -49,7 +49,7 @@ class ChapterController extends Controller
         $chapter->url = $request->url;
         $chapter->save();
 
-        return redirect('chapters');
+        return redirect('chapters/create');
     }
 
     /**

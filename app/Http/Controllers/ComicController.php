@@ -110,7 +110,7 @@ class ComicController extends Controller
         //dd($request->input('genres'));
         
 
-        return redirect('comics');
+        return redirect('comics/create');
 
     }
 

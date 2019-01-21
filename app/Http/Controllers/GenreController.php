@@ -42,7 +42,7 @@ class GenreController extends Controller
         $genre->name = $request->name;
         $genre->save();
 
-        return redirect()->route('genres.index');
+        return redirect('genres/create');
     }
 
     /**
