@@ -3,6 +3,7 @@
 /public/storage
 /storage/*.key
 /vendor
+/app/Http/Controllers/API/AppController.php
 /database/seeds/AdminTableSeeder.php
 .env
 .phpunit.result.cache
