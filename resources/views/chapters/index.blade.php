@@ -32,7 +32,7 @@
                             @foreach($chapters as $chapter)
                             <tr>
                                 <td>{{ $chapter->comic->title }}</td>
-                                <td>{{ $chapter->title }}</td>
+                                <td>{{ $chapter->chapter }}</td>
                                 <td><a href="{{ url('chapters/'.$chapter->id . '\edit/')}}">Edit</a> || <a href="{{ url('image/chapter/'.$chapter->id)}}">Look</a></td>
                             </tr>
                             @endforeach
