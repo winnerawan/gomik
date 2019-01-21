@@ -107,6 +107,6 @@ class ChapterController extends Controller
     }
 
     public function look($id) {
-       return view('chapters.look')->with(['images' => Image::where('chapter_id', $id)->get()]);
+       return view('chapters.look')->with(['image' => Image::where('chapter_id', $id)->get()]);
     }
 }
