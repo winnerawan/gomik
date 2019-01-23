@@ -19,6 +19,7 @@ class CreateComicsTable extends Migration
             $table->string('title');
             $table->string('image');
             $table->text('description');
+            //$table->integer('status');
             $table->timestamps();
         });
     }
