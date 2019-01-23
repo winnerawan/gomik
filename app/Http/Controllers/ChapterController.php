@@ -32,6 +32,7 @@ class ChapterController extends Controller
      */
     public function create()
     {
+
         return view('chapters.create')->with(['comics' => Comic::all()]);
     }
 
@@ -107,6 +108,6 @@ class ChapterController extends Controller
     }
 
     public function look($id) {
-       return view('chapters.look')->with(['image' => Image::where('chapter_id', $id)->get()]);
+       return view('chapters.look')->with(['images' => Image::where('chapter_id', $id)->get()]);
     }
 }

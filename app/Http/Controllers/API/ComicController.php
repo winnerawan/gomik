@@ -21,6 +21,16 @@ class ComicController extends Controller
         return Response()->json($comics);
     }
 
+    public function getPopulars() {
+        $comics = DB::select("SELECT m.*,group_concat(g.name) as genre
+                        from comics m inner join genre_comics mg
+                        on m.id=mg.comic_id
+                        inner join genres g
+                        on g.id=mg.genre_id
+                        group by m.id");
+        return Response()->json($comics);
+    }
+
     public function byGenre($id) {
         $comics = DB::select("SELECT m.*,group_concat(g.name) as genre
                         from comics m inner join genre_comics mg

@@ -25,3 +25,4 @@ Route::get('genres', 'API\GenreController@genres');
 Route::get('comics/{genre_id}', 'API\ComicController@byGenre');
 Route::get('app', 'API\AppController@app');
 Route::get('search', 'API\SearchController@search');
+Route::get('populars', 'API\ComicController@getPopulars');
