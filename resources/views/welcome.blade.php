@@ -136,7 +136,8 @@
                             <ul class="list-unstyled download-buttons">
                                 {{-- <li class="app-store"><a href="#"><img class="img-fluid d-block" src="{{ asset("frontend/images/buttons/btn-app-store.png") }}" alt="Download from App Store" /></a></li> --}}
                                 <li class="google-play"><a href="#"><img class="img-fluid d-block" src="{{ asset("frontend/images/buttons/btn-google-play.png") }}" alt="Download from Google Play" /></a></li>
-                                <li class="windows-store"><a href="https://manga.go-aplikasi.co/go-mic-1-0.apk"><img class="img-fluid d-block" src="{{ asset("frontend/images/buttons/btn-server.png") }}" alt="Download from Windows Phone Store" /></a></li>
+                                Tersedia di playstore segera
+                                {{-- <li class="windows-store"><a href="https://manga.go-aplikasi.co/go-mic-1-0.apk"><img class="img-fluid d-block" src="{{ asset("frontend/images/buttons/btn-server.png") }}" alt="Download from Windows Phone Store" /></a></li> --}}
                             </ul><!--//list-unstyled-->
                             <ul class="list-unstyled summary">
                                 <li><i class="fa fa-check"></i> <a href="#benefit1">Auto Update</a></li>
